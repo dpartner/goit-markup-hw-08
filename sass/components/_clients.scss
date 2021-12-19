@@ -1,0 +1,44 @@
+/* -------------Clients------------- */
+
+.client {
+  @include section();
+}
+
+.client__container {
+  @include container();
+}
+
+.client__title {
+  @extend %title;
+}
+
+.client__logo-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.client__logo-item:not(:first-child) {
+  margin-left: 30px;
+}
+
+.client__logo-link {
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--no-active-color);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--no-active-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--brand-color);
+    border: 1px solid var(--brand-color);
+  }
+}
+
+.client__logo-icon {
+  fill: currentColor;
+}

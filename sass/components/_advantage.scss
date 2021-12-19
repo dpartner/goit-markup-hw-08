@@ -1,0 +1,49 @@
+/* -------------Advantage section------------- */
+
+.advantage {
+  @include section($pb: 0);
+}
+
+.advantage__container {
+  @include container();
+}
+
+.advantage__list {
+  display: flex;
+}
+
+.advantage__item {
+  width: 270px;
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
+}
+
+.advantage__icon-wrapper {
+  padding: 25px 0 25px 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  background: #f5f4fa;
+  border-radius: 4px;
+}
+
+.advantage__title {
+  @extend %title;
+}
+
+.advantage__name {
+  font-size: 14px;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--heading-color);
+}
+
+.advantage__description {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}

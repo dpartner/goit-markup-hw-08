@@ -1,0 +1,45 @@
+/* -------------Experience------------- */
+
+.experience {
+  @include section();
+}
+
+.experience__container {
+  @include container();
+}
+
+.experience__title {
+  @extend %title;
+}
+
+.experience__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.experience__item {
+  position: relative;
+}
+
+.experience__img-overlay {
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.experience__img-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--alternative-text-color);
+  margin: 0;
+}
