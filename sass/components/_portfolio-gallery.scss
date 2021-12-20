@@ -1,13 +1,5 @@
 /* ***********Portfolio Gallery*********** */
 
-.gallery {
-  @include section();
-}
-
-.gallery__container {
-  @include container();
-}
-
 .gallery__title {
   @extend %title;
 }

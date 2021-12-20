@@ -1,13 +1,5 @@
 /* -------------Experience------------- */
 
-.experience {
-  @include section();
-}
-
-.experience__container {
-  @include container();
-}
-
 .experience__title {
   @extend %title;
 }

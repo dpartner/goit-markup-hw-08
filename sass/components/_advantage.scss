@@ -1,11 +1,7 @@
 /* -------------Advantage section------------- */
 
 .advantage {
-  @include section($pb: 0);
-}
-
-.advantage__container {
-  @include container();
+  padding-bottom: 0;
 }
 
 .advantage__list {

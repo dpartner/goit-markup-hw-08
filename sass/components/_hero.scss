@@ -11,10 +11,6 @@
   background-size: 1600px;
 }
 
-.hero__container {
-  @include container();
-}
-
 .hero__title {
   font-weight: 900;
   font-size: 44px;

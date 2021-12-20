@@ -1,12 +1,7 @@
 /* -------------Team------------- */
 
 .team {
-  @include section();
   background: var(--secondary-background);
-}
-
-.team__container {
-  @include container();
 }
 
 .team__title {

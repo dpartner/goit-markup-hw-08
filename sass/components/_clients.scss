@@ -1,13 +1,5 @@
 /* -------------Clients------------- */
 
-.client {
-  @include section();
-}
-
-.client__container {
-  @include container();
-}
-
 .client__title {
   @extend %title;
 }
