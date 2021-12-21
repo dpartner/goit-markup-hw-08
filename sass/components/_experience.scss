@@ -1,4 +1,11 @@
 /* -------------Experience------------- */
+.experience {
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
 
 .experience__title {
   @extend %title;

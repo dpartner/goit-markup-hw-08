@@ -6,16 +6,24 @@
 
 .client__logo-list {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  margin: -15px;
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: unset;
+  }
 }
 
-.client__logo-item:not(:first-child) {
-  margin-left: 30px;
+.client__logo-item {
+  margin: 15px;
+  flex-basis: calc((100% - 60px) / 2);
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 90px) / 3);
+  }
 }
 
 .client__logo-link {
-  width: 170px;
   height: 92px;
   border: 1px solid var(--no-active-color);
   border-radius: 4px;
