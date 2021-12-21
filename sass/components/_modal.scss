@@ -8,6 +8,7 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
+  overflow-y: scroll;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -15,8 +16,9 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  min-height: 581px;
+  // min-width: 320px;
+  width: 93%;
+  min-height: 609px;
   padding: 40px;
   background: var(--body-background);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -24,6 +26,15 @@
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -41,6 +52,7 @@
   align-items: center;
   background: var(--body-background);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  color: black;
   border-radius: 50%;
   cursor: pointer;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -65,10 +77,14 @@
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.2;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--modal-text-color);
+
+  @media screen and (min-width: 1200px) {
+    line-height: 1.2;
+  }
 }
 
 .modal__form-label {
@@ -149,8 +165,8 @@
   width: 16px;
   height: 15px;
   padding: 4px 2px 3px 3px;
-  margin-left: 12px;
-  margin-right: 9px;
+  // margin-left: 12px;
+  margin-right: 6px;
   border: 2px solid var(--modal-text-color);
   border-radius: 2px;
   display: flex;
@@ -163,13 +179,17 @@
 }
 
 .modal__checkbox-label {
-  // margin-left: 1px;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.1;
   letter-spacing: 0.03em;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
 
 .modal__hidden-checkbox:focus + .modal__checkbox-label .modal__checkbox {

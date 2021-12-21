@@ -595,23 +595,36 @@ img {
 .hero {
   background-color: var(--primary-background);
   text-align: center;
-  padding: 200px 15px;
+  padding: 118px 0;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1600px;
+  background-size: cover;
 }
 
 .hero__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
+  font-size: 26px;
+  line-height: 1.6;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--alternative-text-color);
   margin: 0 auto 30px auto;
-  width: 696px;
+}
+
+@media screen and (min-width: 480px) {
+  .hero__title {
+    width: 360px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.4;
+  }
 }
 
 /* -------------Advantage section------------- */
@@ -961,6 +974,7 @@ img {
 }
 
 .mobile-menu__contacts {
+  margin-top: 64px;
   margin-bottom: 64px;
 }
 
@@ -1012,6 +1026,7 @@ img {
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
+  overflow-y: scroll;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1019,14 +1034,27 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  min-height: 581px;
+  width: 93%;
+  min-height: 609px;
   padding: 40px;
   background: var(--body-background);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -1044,6 +1072,7 @@ img {
   align-items: center;
   background: var(--body-background);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  color: black;
   border-radius: 50%;
   cursor: pointer;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1068,10 +1097,16 @@ img {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.2;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--modal-text-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__form-heading {
+    line-height: 1.2;
+  }
 }
 
 .modal__form-label {
@@ -1153,8 +1188,7 @@ img {
   width: 16px;
   height: 15px;
   padding: 4px 2px 3px 3px;
-  margin-left: 12px;
-  margin-right: 9px;
+  margin-right: 6px;
   border: 2px solid var(--modal-text-color);
   border-radius: 2px;
   display: flex;
@@ -1167,12 +1201,19 @@ img {
 }
 
 .modal__checkbox-label {
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.1;
   letter-spacing: 0.03em;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__checkbox-label {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
 
 .modal__hidden-checkbox:focus + .modal__checkbox-label .modal__checkbox {
