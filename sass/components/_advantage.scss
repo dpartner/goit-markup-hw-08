@@ -1,15 +1,5 @@
 /* -------------Advantage section------------- */
 
-.advantage {
-  padding-bottom: 30px;
-  @media screen and (min-width: 768px) {
-    padding-bottom: 60px;
-  }
-  @media screen and (min-width: 1200px) {
-    padding-bottom: 0;
-  }
-}
-
 .advantage__list {
   @media screen and (min-width: 768px) {
     display: flex;
@@ -24,18 +14,20 @@
 
 .advantage__item {
   width: 100%;
-  margin-bottom: 30px;
 
   @media screen and (min-width: 480px) {
     width: 450px;
   }
 
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
   @media screen and (min-width: 768px) {
     width: calc((100% - 60px) / 2);
     margin: 15px;
-    &:not(:last-child) {
-      margin-bottom: 0px;
-    }
   }
 }
 

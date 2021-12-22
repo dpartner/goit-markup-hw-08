@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!--Header-->
+    <!--*****************Header*****************-->
+
     <header class="header">
       <div class="header__container container">
         <a class="header__logo logo" href="./index.html"
@@ -61,14 +62,17 @@
       </div>
     </header>
     <main>
-      <!--Секция Hero-->
+      <!--*****************Секция Hero*****************-->
+
       <section class="hero">
         <div class="hero__container container">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
           <button class="hero__button" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
-      <!--Секция с нашими преимуществами-->
+
+      <!--*****************Секция с нашими преимуществами*****************-->
+
       <section class="advantage section">
         <div class="advantage__container container">
           <h2 class="advantage__title visually-hidden">Наши преимущества</h2>
@@ -120,7 +124,9 @@
           </ul>
         </div>
       </section>
-      <!--Секция Чем мы занимаемся-->
+
+      <!--*****************Секция Чем мы занимаемся*****************-->
+
       <section class="experience section">
         <div class="experience__container container">
           <h2 class="experience__title">Чем мы занимаемся</h2>
@@ -161,13 +167,48 @@
           </ul>
         </div>
       </section>
-      <!--Секция Наша команда-->
+
+      <!--*****************Секция Наша команда*****************-->
+
       <section class="team section">
         <div class="team__container container">
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img class="team-image" src="images/img1.jpg" alt="Фото Игоря" />
+              <picture>
+                <source
+                  srcset="./images/webp/team1.webp 1x, ./images/webp/team1@2x.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/team1.jpg 1x, ./images/team1@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="./images/webp/team1_tab.webp 1x, ./images/webp/team1_tab@2x.webp 2x"
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/team1_tab.jpg 1x, ./images/team1_tab@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="./images/webp/team1_mob.webp 1x, ./images/webp/team1_mob@2x.webp 2x"
+                  media="(min-width: 320px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/team1_mob.jpg 1x, ./images/team1_mob@2x.jpg 2x"
+                  media="(min-width: 320px)"
+                  type="image/jpg"
+                />
+                <img class="team-image" src="./images/team1@2x.jpg" alt="Фото Игоря" />
+              </picture>
+              <!-- <img class="team-image" src="images/img1.jpg" alt="Фото Игоря" /> -->
               <div class="team__botoom-wrap">
                 <h3 class="team__name">Игорь Демьяненко</h3>
                 <p class="team__description">Product Designer</p>
@@ -317,7 +358,9 @@
           </ul>
         </div>
       </section>
-      <!--Секция Клиенты-->
+
+      <!--*****************Секция Клиенты*****************-->
+
       <section class="client section">
         <div class="client__container container">
           <h2 class="client__title">Постоянные клиенты</h2>
@@ -368,7 +411,9 @@
         </div>
       </section>
     </main>
-    <!--Футер-->
+
+    <!--*****************Футер*****************-->
+
     <footer class="footer">
       <div class="footer__container container">
         <div class="footer__address-wrap">
@@ -447,7 +492,9 @@
         </div>
       </div>
     </footer>
-    <!--Мобильное меню-->
+
+    <!--*****************Мобильное меню*****************-->
+
     <div class="mobile-menu js-mobile-menu">
       <button type="button" class="menu-toggle mobile-menu__menu-toggle js-close-menu">
         <svg class="menu-toggle__icon" width="19" height="19">
@@ -490,7 +537,9 @@
         </li>
       </ul>
     </div>
-    <!--Модалка-->
+
+    <!--*****************Модалка*****************-->
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal__close" data-modal-close>
